@@ -47,13 +47,24 @@ const campionato = [
     {nome: 'Roma', punti: 0, falliSubiti: 0},
     {nome: 'Sassuolo', punti: 0, falliSubiti: 0},
     {nome: 'Lazio', punti: 0, falliSubiti: 0}
-]
+];
 
 for (let i = 0; i < campionato.length; i++) {
     if (campionato[i].punti == 0 || campionato[i].falliSubiti == 0) {
         campionato[i].punti = Math.floor(Math.random() * 60) + 1;
         campionato[i].falliSubiti = Math.floor(Math.random() * 100) + 1;
     }
-}
-console.log(campionato)
+};
 
+console.log(campionato);
+
+const coppaFairPlay = [];
+
+for (let i = 0; i < campionato.length; i++) {
+    if (campionato[i].nome != '') {
+        const {nome, falliSubiti} = campionato[i];
+        coppaFairPlay.push({nome: nome, falliSubiti: falliSubiti})
+    }
+}
+
+console.log(coppaFairPlay);
