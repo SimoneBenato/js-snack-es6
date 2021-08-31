@@ -38,3 +38,22 @@
 // Punti fatti e falli subiti.
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
+const campionato = [
+    {nome: 'Juve', punti: 0, falliSubiti: 0},
+    {nome: 'Milan', punti: 0, falliSubiti: 0},
+    {nome: 'Inter', punti: 0, falliSubiti: 0},
+    {nome: 'Atalanta', punti: 0, falliSubiti: 0},
+    {nome: 'Napoli', punti: 0, falliSubiti: 0},
+    {nome: 'Roma', punti: 0, falliSubiti: 0},
+    {nome: 'Sassuolo', punti: 0, falliSubiti: 0},
+    {nome: 'Lazio', punti: 0, falliSubiti: 0}
+]
+
+for (let i = 0; i < campionato.length; i++) {
+    if (campionato[i].punti == 0 || campionato[i].falliSubiti == 0) {
+        campionato[i].punti = Math.floor(Math.random() * 60) + 1;
+        campionato[i].falliSubiti = Math.floor(Math.random() * 100) + 1;
+    }
+}
+console.log(campionato)
+
