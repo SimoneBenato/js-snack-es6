@@ -38,33 +38,59 @@
 // Punti fatti e falli subiti.
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
-const campionato = [
-    {nome: 'Juve', punti: 0, falliSubiti: 0},
-    {nome: 'Milan', punti: 0, falliSubiti: 0},
-    {nome: 'Inter', punti: 0, falliSubiti: 0},
-    {nome: 'Atalanta', punti: 0, falliSubiti: 0},
-    {nome: 'Napoli', punti: 0, falliSubiti: 0},
-    {nome: 'Roma', punti: 0, falliSubiti: 0},
-    {nome: 'Sassuolo', punti: 0, falliSubiti: 0},
-    {nome: 'Lazio', punti: 0, falliSubiti: 0}
-];
+// const campionato = [
+//     {nome: 'Juve', punti: 0, falliSubiti: 0},
+//     {nome: 'Milan', punti: 0, falliSubiti: 0},
+//     {nome: 'Inter', punti: 0, falliSubiti: 0},
+//     {nome: 'Atalanta', punti: 0, falliSubiti: 0},
+//     {nome: 'Napoli', punti: 0, falliSubiti: 0},
+//     {nome: 'Roma', punti: 0, falliSubiti: 0},
+//     {nome: 'Sassuolo', punti: 0, falliSubiti: 0},
+//     {nome: 'Lazio', punti: 0, falliSubiti: 0}
+// ];
 
-for (let i = 0; i < campionato.length; i++) {
-    if (campionato[i].punti == 0 || campionato[i].falliSubiti == 0) {
-        campionato[i].punti = Math.floor(Math.random() * 60) + 1;
-        campionato[i].falliSubiti = Math.floor(Math.random() * 100) + 1;
-    }
-};
+// for (let i = 0; i < campionato.length; i++) {
+//     if (campionato[i].punti == 0 || campionato[i].falliSubiti == 0) {
+//         campionato[i].punti = Math.floor(Math.random() * 60) + 1;
+//         campionato[i].falliSubiti = Math.floor(Math.random() * 100) + 1;
+//     }
+// };
 
-console.log(campionato);
+// console.log(campionato);
 
-const coppaFairPlay = [];
+// const coppaFairPlay = [];
 
-for (let i = 0; i < campionato.length; i++) {
-    if (campionato[i].nome != '') {
-        const {nome, falliSubiti} = campionato[i];
-        coppaFairPlay.push({nome: nome, falliSubiti: falliSubiti})
-    }
+// for (let i = 0; i < campionato.length; i++) {
+//     if (campionato[i].nome != '') {
+//         const {nome, falliSubiti} = campionato[i];
+//         coppaFairPlay.push({nome: nome, falliSubiti: falliSubiti})
+//     }
+// }
+
+// console.log(coppaFairPlay);
+
+// -------------------------------------------------------------------------
+// Snack 3
+// Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+// Usiamo i nuovi metodi degli array foreach o filter.
+
+const array = [1,2,3,4,5,6,7,8,9,10];
+const a;
+const b;
+
+const random = (min,max) => {
+    return Math.floor(Math.random() * max) + min;
 }
 
-console.log(coppaFairPlay);
+do {
+    a = random(1, 10);
+    b = random(1, 10);
+} while (a >= b);
+
+
+let newArray = array.filter((element, index) => {
+    if(i >= a && i < b-1) {
+        return true;
+    } return false;
+});
